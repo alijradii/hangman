@@ -101,6 +101,10 @@ body {
 }
 
 .pressed {
-  opacity: 0.5;
   transition: all 0.3s ease-in-out;
+  background-color: rgb(88, 88, 88);
+}
+
+.pressed:hover {
+  background-color: rgb(88, 88, 88);
 }

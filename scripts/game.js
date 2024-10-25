@@ -25,7 +25,10 @@ function initButtonListeners() {
 
   keys.forEach((key) => {
     key.addEventListener("click", function (key) {
+      if(key.target.classList.contains("pressed")) return;
+
       console.log(key.target.innerText);
+      key.target.classList.add("pressed")
     });
   });
 }
