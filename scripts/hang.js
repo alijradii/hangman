@@ -18,3 +18,7 @@ function onWrongAnswer() {
     part = hangmanParts[wrongWordCount]
     console.log(part)
 }
+
+function onCorrectAnswer() {
+
+}

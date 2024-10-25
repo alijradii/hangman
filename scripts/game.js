@@ -9,7 +9,7 @@ fetch("../data/wordlist.txt")
 
     index = Math.floor(Math.random() * arr.length);
     word = arr[index];
-    console.log(word);
+    console.log("word: " + word);
 
     startGame(word);
   })
@@ -21,14 +21,16 @@ function startGame(word) {
 
 function initButtonListeners() {
   keys = Array.from(document.getElementsByClassName("letter"));
-  console.log(keys)
 
   keys.forEach((key) => {
     key.addEventListener("click", function (key) {
       if(key.target.classList.contains("pressed")) return;
 
-      console.log(key.target.innerText);
+      letter = key.target.innerText
       key.target.classList.add("pressed")
+
+      if(word.includes(letter.toLowerCase())) onCorrectAnswer();
+      else onWrongAnswer();
     });
   });
 }
