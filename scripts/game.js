@@ -1,8 +1,6 @@
 word = "";
 cur = "";
 
-answerSection = document.getElementById("answer-section");
-
 // got the file reading method from stackoverflow
 // https://stackoverflow.com/questions/14446447/how-to-read-a-local-text-file-in-the-browser
 fetch("../data/wordlist.txt")
