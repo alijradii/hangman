@@ -22,7 +22,7 @@ function onWrongAnswer() {
 
   if (wrongWordCount == 6) {
     setTimeout(() => {
-      alert("You Lose!");
+      alert(`You Lose!\n\nThe word was "${word}"`);
       location.reload();
     }, 400);
   }
