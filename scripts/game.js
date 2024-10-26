@@ -55,8 +55,9 @@ function onCorrectAnswer(letter) {
   answerSection.innerText = cur;
 
   if (cur == word) {
-    alert("You Win!");
-
-    location.reload();
+    setTimeout(() => {
+      alert("You Win!");
+      location.reload();
+    }, 400);
   }
 }

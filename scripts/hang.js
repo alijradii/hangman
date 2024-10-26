@@ -21,8 +21,9 @@ function onWrongAnswer() {
   hang.appendChild(element);
 
   if (wrongWordCount == 6) {
-    alert("You Lose!");
-
-    location.reload();
+    setTimeout(() => {
+      alert("You Lose!");
+      location.reload();
+    }, 400);
   }
 }
