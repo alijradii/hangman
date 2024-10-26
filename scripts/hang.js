@@ -3,12 +3,6 @@ wrongWordCount = 0;
 function onWrongAnswer() {
   wrongWordCount++;
 
-  if (wrongWordCount == 7) {
-    alert("You Lose!");
-
-    location.reload();
-  }
-
   hangmanParts = [
     "head",
     "body",
@@ -25,4 +19,10 @@ function onWrongAnswer() {
   element.setAttribute("src", `../assets/${part}.svg`);
 
   hang.appendChild(element);
+
+  if (wrongWordCount == 6) {
+    alert("You Lose!");
+
+    location.reload();
+  }
 }
