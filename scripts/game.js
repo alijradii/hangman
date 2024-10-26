@@ -53,4 +53,10 @@ function onCorrectAnswer(letter) {
 
   cur = newString;
   answerSection.innerText = cur;
+
+  if (cur == word) {
+    alert("You Win!");
+
+    location.reload();
+  }
 }
