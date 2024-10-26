@@ -4,7 +4,9 @@ function onWrongAnswer() {
   wrongWordCount++;
 
   if (wrongWordCount == 7) {
-    return;
+    alert("You Lose!");
+
+    location.reload();
   }
 
   hangmanParts = [
