@@ -1,24 +1,23 @@
-wrongWordCount = 0
+wrongWordCount = 0;
 
 function onWrongAnswer() {
-    wrongWordCount++;
+  wrongWordCount++;
 
-    if(wrongWordCount == 7) {
-    }
+  if (wrongWordCount == 7) {
+    return;
+  }
 
-    hangmanParts = {
-        1: "head",
-        2: "body", 
-        3: "left-arm",
-        4: "right-arm",
-        5: "left-leg",
-        6: "right-leg"
-    }
+  hangmanParts = [
+    "head",
+    "body",
+    "left-arm",
+    "right-arm",
+    "left-leg",
+    "right-leg",
+  ];
 
-    part = hangmanParts[wrongWordCount]
-    console.log(part)
+  part = hangmanParts[wrongWordCount - 1];
+  console.log(part);
 }
 
-function onCorrectAnswer() {
-
-}
+function onCorrectAnswer() {}

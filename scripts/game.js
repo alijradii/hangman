@@ -24,12 +24,12 @@ function initButtonListeners() {
 
   keys.forEach((key) => {
     key.addEventListener("click", function (key) {
-      if(key.target.classList.contains("pressed")) return;
+      if (key.target.classList.contains("pressed")) return;
 
-      letter = key.target.innerText
-      key.target.classList.add("pressed")
+      letter = key.target.innerText;
+      key.target.classList.add("pressed");
 
-      if(word.includes(letter.toLowerCase())) onCorrectAnswer();
+      if (word.includes(letter.toLowerCase())) onCorrectAnswer();
       else onWrongAnswer();
     });
   });
